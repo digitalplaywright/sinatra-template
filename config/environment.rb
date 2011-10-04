@@ -15,10 +15,10 @@ when :staging
   FOO = 'stage'
 
 when :development
-  FOO = 'stage'
+  FOO = 'dev'
 
 when :test
-  FOO = 'stage'
+  FOO = 'test'
 
 else
   raise "Could not determine configuration to use for environment '#{env}'"

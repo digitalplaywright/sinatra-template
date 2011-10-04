@@ -9,14 +9,12 @@ Bundler.setup
 Bundler.require(:default, ENV['RACK_ENV'].to_sym) unless ENV['RACK_ENV'].nil?
 
 require 'sinatra'
-#require 'resque'
 
 # --- begin system gems not in Gemfile ---
 require 'logger'
-#require 'iconv'
 # --- end system gems ---
 
-autoload_paths = %w(/lib) #/app/models)
+autoload_paths = %w(/lib)
 
 autoload_paths.each do |path|
   file_path = File.join(File.dirname(__FILE__), "..", path)
@@ -26,8 +24,6 @@ autoload_paths.each do |path|
     require file
   end
 end
-
-# the above doesn't seem to work right- using drod's code until we can fix
 
 SINATRA_ROOT = File.join(File.dirname(__FILE__), '..')
 
