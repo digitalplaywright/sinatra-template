@@ -9,7 +9,7 @@ Bundler.setup
 Bundler.require(:default, ENV['RACK_ENV'].to_sym) unless ENV['RACK_ENV'].nil?
 
 require 'sinatra'
-require 'resque'
+#require 'resque'
 
 # --- begin system gems not in Gemfile ---
 require 'logger'
